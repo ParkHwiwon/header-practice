@@ -1,0 +1,92 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Rubik', sans-serif;
+}
+
+.nav{
+  display: flex;
+  justify-content:space-between;
+  background-color: navy;
+  color: white;
+}
+
+.nav_logo{
+  display: flex;
+  align-items: center;
+}
+
+.nav_logo i{
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.nav_logo p{
+font-weight: 600;
+font-size: larger;
+}
+
+.nav_menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_menu li{
+  padding: 12px 18px;
+}
+
+.nav_icon{
+  display: flex;
+  align-items: center;
+}
+
+.nav_icon i{
+  padding: 24px 12px;
+}
+
+.nav_menu li:hover{
+  background-color: lightsalmon;
+  border-radius: 40px;
+}
+
+.toggleBtn{
+  position: absolute;
+  right: 32px;
+  color: white;
+  display: none;
+}
+
+
+@media screen and (max-width: 768px ) {
+  .nav{
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+  .nav_menu{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .nav_menu li{
+    width: 100%;
+    text-align: center;
+  }
+  .nav_icon{
+    justify-content: center;
+    width: 100%;
+    display: none;
+  }
+  .toggleBtn{
+    display: block;
+  }
+
+  .nav_menu.active,
+  .nav_icon.active{
+    display: flex;
+  }
+}
